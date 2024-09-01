@@ -1,5 +1,3 @@
-# Dependency directories
-node_modules/
-
-# dotenv environment variable file
+node_module
 .env
+dist/
