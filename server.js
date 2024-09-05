@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
+const authRouter = require('./routes/auth/auth-routes')
 
 const app = express();
 app.use(cookieParser());
@@ -37,6 +38,7 @@ mongoose.connect(MONGO_URL, {
 
 // Middleware
 app.use(express.json());
+app.use("/api/auth",authRouter)
 
 // Routes
 app.get('/', (req, res) => {
