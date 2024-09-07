@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 const MONGO_URL = process.env.MONGO_URL; // Access the MONGO_URI from the environment variables
 
 app.use(cors({
-  origin : 'http://localhost:5173/',
+  origin : 'http://localhost:5173',
   methods : ['GET','PUT','POST',"DELETE"],
   allowedHeaders : [
     "Content-Type",
